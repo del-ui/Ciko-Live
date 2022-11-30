@@ -1,6 +1,9 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import FontAwesome from "react-native-vector-icons/FontAwesome"
+import FontAwesome from "react-native-vector-icons/FontAwesome";
+import {createStackNavigator} from "@react-navigation/stack";
+import {NavigationContainer} from "@react-navigation/native";
+import { useNavigation } from '@react-navigation/native';
 
 
 const items = [
@@ -28,7 +31,17 @@ const items = [
 ]
 
 
-function MenuButtons() {
+function MenuButtons({navigation}) {
+
+ /* function openMeeting(){
+    const navigation = useNavigation();
+      navigation.navigate("MeetingRoom")
+  }
+  */  
+
+  
+
+
   return (
     <View 
       key={"index"}
@@ -37,6 +50,8 @@ function MenuButtons() {
       {items.map((item, index) =>
            <View style={styles.vidButton}>
               <TouchableOpacity
+              onPress={()=> navigation.navigate()}
+
                  style={{
                   ...styles.button,
                   backgroundColor: item.customColor? item.customColor: "#0470DC"
