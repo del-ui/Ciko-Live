@@ -33,11 +33,10 @@ const items = [
 
 function MenuButtons({navigation}) {
 
- /* function openMeeting(){
-    const navigation = useNavigation();
-      navigation.navigate("MeetingRoom")
+ function openMeeting(){
+    navigation = navigation.navigate("MeetingRoom")
   }
-  */  
+  
 
   
 
@@ -50,7 +49,7 @@ function MenuButtons({navigation}) {
       {items.map((item, index) =>
            <View style={styles.vidButton}>
               <TouchableOpacity
-              onPress={()=> navigation.navigate()}
+              onPress={()=> openMeeting()}
 
                  style={{
                   ...styles.button,

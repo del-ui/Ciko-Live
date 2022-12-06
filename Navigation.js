@@ -18,7 +18,7 @@ function Navigation() {
             />
 
             <Stack.Screen
-                name='MeetingRoom'
+                name="MeetingRoom"
                 component={MeetingRoom}
             />
 
