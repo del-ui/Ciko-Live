@@ -5,7 +5,7 @@ function MeetingRoom() {
   return (
     <View>
         <Text>
-            MeetingRoom
+           <b> MeetingRoom </b>
         </Text>
     </View>
   )
